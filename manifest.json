@@ -1,0 +1,34 @@
+{
+  "name": "Shopify Landing Page",
+  "description": "A landing page for a Shopify store",
+  "version": "0.0.1",
+  "author": "Ibukun",
+
+
+  "manifest_version": 3,
+
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
